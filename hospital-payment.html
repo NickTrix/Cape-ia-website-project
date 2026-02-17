@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Payment Portal</title>
+</head>
+<body>
+
+<header>
+    <h1>🏥 Hospital Payment Portal</h1>
+    <p>🔒 Secure Payment Processing</p>
+</header>
+
+<hr>
+
+<nav>
+    <a href="dashboard.html">Dashboard</a> |
+    <a href="search.html">Search Patients</a> |
+    <a href="index.html">Logout</a>
+</nav>
+
+<hr>
+
+<main>
+
+    <h2>Patient Payment Form</h2>
+
+    <form action="#" method="post">
+
+        <!-- Patient Information -->
+        <section>
+            <h3>Patient Information</h3>
+
+            <label>Full Name:</label><br>
+            <input type="text" name="fullname" required><br><br>
+
+            <label>Patient ID:</label><br>
+            <input type="text" name="patientID" required><br><br>
+
+            <label>Email Address:</label><br>
+            <input type="email" name="email"><br><br>
+        </section>
+
+        <hr>
+
+        <!-- Service Details -->
+        <section>
+            <h3>Service Details</h3>
+
+            <label>Service Description:</label><br>
+            <input type="text" name="service" required><br><br>
+
+            <label>Amount Due (USD):</label><br>
+            <input type="number" name="amount" min="0" step="0.01" required><br><br>
+        </section>
+
+        <hr>
+
+        <!-- Payment Method -->
+        <section>
+            <h3>Payment Method</h3>
+
+            <input type="radio" name="paymentMethod" value="credit" required> Credit Card<br>
+            <input type="radio" name="paymentMethod" value="debit"> Debit Card<br>
+            <input type="radio" name="paymentMethod" value="insurance"> Insurance<br>
+            <input type="radio" name="paymentMethod" value="cash"> Cash<br><br>
+        </section>
+
+        <hr>
+
+        <!-- Card Details -->
+        <section>
+            <h3>Card Details (If Paying by Card)</h3>
+
+            <label>Card Number:</label><br>
+            <input type="text" name="cardNumber" maxlength="16"><br><br>
+
+            <label>Expiry Date:</label><br>
+            <input type="month" name="expiry"><br><br>
+
+            <label>CVV:</label><br>
+            <input type="password" name="cvv" maxlength="4"><br><br>
+        </section>
+
+        <hr>
+
+        <!-- Billing Address -->
+        <section>
+            <h3>Billing Address</h3>
+
+            <label>Street Address:</label><br>
+            <input type="text" name="street"><br><br>
+
+            <label>City:</label><br>
+            <input type="text" name="city"><br><br>
+
+            <label>Country:</label><br>
+            <input type="text" name="country"><br><br>
+
+            <label>Postal Code:</label><br>
+            <input type="text" name="postal"><br><br>
+        </section>
+
+        <hr>
+
+        <!-- Buttons -->
+        <button type="submit">Submit Payment</button>
+        <button type="reset">Reset Form</button>
+
+    </form>
+
+</main>
+
+<hr>
+
+<footer>
+    <p>&copy; 2026 Hospital Patient Information System</p>
+</footer>
+
+</body>
+</html>
