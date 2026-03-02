@@ -1,1 +1,156 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+}
+header h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+header nav {
+    text-align: center;
+}
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+header nav a.active,
+header nav a:hover {
+    background-color: #2980b9;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://png.pngtree.com/thumb_back/fh260/background/20221102/pngtree-intentional-camera-movement-of-ocean-wave-scenic-icm-camera-photo-image_34503772.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero .btn {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.hero .btn:hover {
+    background-color: #1c5980;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 0;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+.features h2 {
+    margin-bottom: 2rem;
+}
+.features ul {
+    list-style: none;
+}
+.features li {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 3rem 0;
+    text-align: center;
+}
+.contact h2 {
+    margin-bottom: 1rem;
+}
+.contact p {
+    margin: 0.5rem 0;
+}
+.contact .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.contact .btn:hover {
+    background-color: #1c5980;
+}
+
+/* Login Form */
+.login {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+.login h2 {
+    margin-bottom: 2rem;
+}
+.login form {
+    display: inline-block;
+    text-align: left;
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.login label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.login input {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login button.btn {
+    width: 100%;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.login button.btn:hover {
+    background-color: #1c5980;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
