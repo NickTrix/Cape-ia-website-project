@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Alexanhos-Web</title>
+    <link rel="stylesheet" href="patient-style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏥 Alexandra Hospital</h1>
+    <p>Secure Patient Payment Portal</p>
+    <nav>
+        <a href="patient_dashboard.html">Dashboard</a> |
+        <a href="appointments.html">Appointments</a> |
+        <a href="payment.html">Payments</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="home.html">Logout</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Make a Payment</h2>
+    <form action="#" method="post">
+        <label for="service">Service:</label>
+        <input type="text" id="service" name="service" placeholder="Consultation" required>
+
+        <label for="amount">Amount Due (XCD):</label>
+        <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="0.00" required>
+        <p class="note">*Conversion Rate: 1 USD = 3.7169 XCD</p>
+
+        <label for="paymentMethod">Payment Method:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="">--Select--</option>
+            <option value="credit">Credit Card</option>
+            <option value="debit">Debit Card</option>
+            <option value="insurance">Insurance</option>
+            <option value="cash">Cash</option>
+        </select>
+
+        <button type="submit">Pay Now</button>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Alexandra Hospital Patient Portal</p>
+</footer>
+
+</body>
+</html>

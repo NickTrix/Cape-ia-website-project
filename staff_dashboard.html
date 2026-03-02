@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexanhos-Web | Staff Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="patients.html">Patient Records</a>
+            <a href="appointments.html">Appointments</a>
+            <a href="billing.html">Billing</a>
+            <a href="reports.html">Reports</a>
+            <a href="s_login.html" class="active">Staff Portal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="staff-dashboard">
+    <div class="container">
+        <h2 id="welcome-message">Welcome!</h2>
+        <p>Use the links below to manage hospital operations:</p>
+        <ul>
+            <li><a href="patients.html">View Patients</a></li>
+            <li><a href="appointments.html">Manage Appointments</a></li>
+            <li><a href="billing.html">Billing & Payments</a></li>
+            <li><a href="reports.html">Generate Reports</a></li>
+        </ul>
+        <a href="home.html" class="btn">Logout</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexandra Hospital | Alexanhos-Web</p>
+        <p>For staff assistance, contact IT at itsupport@alexanhos-web.com</p>
+    </div>
+</footer>
+
+<script>
+    
+// Read staff name from URL and show it
+const urlParams = new URLSearchParams(window.location.search);
+const staffName = urlParams.get('name');
+if(staffName) {
+    document.getElementById('welcome-message').textContent = `Welcome, ${staffName}!`;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexanhos-Web | Staff Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="s_login.html" class="active">Staff Login</a>
+        </nav>
+    </div>
+</header>
+
+<section class="login-section">
+    <div class="container">
+        <h2>Staff Login</h2>
+        <p>Enter your first and last name to access your portal.</p>
+
+        <form id="staff-login-form">
+            <label for="staff-name">Staff Name:</label>
+            <input type="text" id="staff-name" name="staff-name" placeholder="First and Last Name" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Your Password" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p>Forgot your password? <a href="reset_password.html">Reset it here</a></p>
+        <a href="home.html" class="btn">Back to Home</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexandra Hospital | Alexanhos-Web</p>
+        <p>For staff assistance, contact IT at itsupport@alexanhos-web.com</p>
+    </div>
+</footer>
+
+<script>
+document.getElementById('staff-login-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent actual form submission
+    const staffName = document.getElementById('staff-name').value;
+    // redirect to dashboard with staff name in URL
+    window.location.href = `staff_dashboard.html?name=${encodeURIComponent(staffName)}`;
+});
+</script>
+
+</body>
+</html>

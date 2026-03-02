@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexanhos-Web | Patient Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="p_login.html" class="active">Patient Login</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="login-section">
+    <div class="container">
+        <h2>Patient Portal Login</h2>
+        <p>Enter your first and last name to access your portal.</p>
+
+        <form id="patient-login-form">
+            <label for="patient-name">Patient Name:</label>
+            <input type="text" id="patient-name" name="patient-name" placeholder="First and Last Name" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Your Password" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p>Forgot your password? <a href="reset_password.html">Reset it here</a></p>
+        <a href="home.html" class="btn">Back to Home</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexandra Hospital | Alexanhos-Web</p>
+        <p>For patient assistance, contact info@alexanhos-web.com</p>
+    </div>
+</footer>
+
+<script>
+document.getElementById('patient-login-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent actual form submission
+    const patientName = document.getElementById('patient-name').value;
+    // Redirect to dashboard with name in URL
+    window.location.href = `patient_dashboard.html?name=${encodeURIComponent(patientName)}`;
+});
+</script>
+
+</body>
+</html>
