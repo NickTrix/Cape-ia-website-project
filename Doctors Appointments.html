@@ -2,82 +2,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Veiw / Manage Appointments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment | Alexanhos-Web</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
- <nav>
-        <a href="patient_dashboard.html">Dashboard</a> |
-        <a href="appointments.html">Appointments</a> |
-        <a href="payment.html">Payments</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="index.html">Logout</a>
-</nav>
-    
-    <body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="p_login.html" class="active">Patient Portal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <h1>Doctor Appointment Booking</h1>
+<!-- Doctor Appointment Section -->
+<section class="patient-dashboard">
+    <div class="container">
+        <h2>Book a Doctor Appointment</h2>
+        <p>Please fill out the form below to schedule your appointment:</p>
 
-    <form action="#" method="post">
+        <form action="#" method="post">
 
-        <h3>Patient Information</h3>
+            <h3>Patient Information</h3>
 
-        <label>Full Name:</label><br>
-        <input type="text" name="name" required><br><br>
+            <label>Full Name:</label><br>
+            <input type="text" name="name" required><br><br>
 
-        <label>Date of Birth:</label><br>
-        <input type="date" name="dob" required><br><br>
+            <label>Date of Birth:</label><br>
+            <input type="date" name="dob" required><br><br>
 
-        <label>Gender:</label><br>
-        <select name="gender">
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select><br><br>
+            <label>Gender:</label><br>
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select><br><br>
 
-        <label>Phone Number:</label><br>
-        <input type="tel" name="phone" required><br><br>
+            <label>Phone Number:</label><br>
+            <input type="tel" name="phone" required><br><br>
 
-        <label>Email:</label><br>
-        <input type="email" name="email"><br><br>
+            <label>Email:</label><br>
+            <input type="email" name="email"><br><br>
 
 
-        <h3>Appointment Details</h3>
+            <h3>Appointment Details</h3>
 
-        <label>Select Doctor:</label><br>
-        <select name="doctor">
-            <option>Dr. Adams</option>
-            <option>Dr. Brown</option>
-            <option>Dr. Clarke</option>
-        </select><br><br>
+            <label>Select Doctor:</label><br>
+            <select name="doctor">
+                <option>Dr. Adams</option>
+                <option>Dr. Brown</option>
+                <option>Dr. Clarke</option>
+            </select><br><br>
 
-        <label>Department:</label><br>
-        <select name="department">
-            <option>General Medicine</option>
-            <option>Pediatrics</option>
-            <option>Cardiology</option>
-        </select><br><br>
+            <label>Department:</label><br>
+            <select name="department">
+                <option>General Medicine</option>
+                <option>Pediatrics</option>
+                <option>Cardiology</option>
+            </select><br><br>
 
-        <label>Appointment Type:</label><br>
-        <input type="radio" name="type" value="inperson"> In-Person<br>
-        <input type="radio" name="type" value="online"> Online<br><br>
+            <label>Appointment Type:</label><br>
+            <input type="radio" name="type" value="inperson"> In-Person<br>
+            <input type="radio" name="type" value="online"> Online<br><br>
 
-        <label>Date:</label><br>
-        <input type="date" name="date" required><br><br>
+            <label>Date:</label><br>
+            <input type="date" name="date" required><br><br>
 
-        <label>Time:</label><br>
-        <input type="time" name="time" required><br><br>
+            <label>Time:</label><br>
+            <input type="time" name="time" required><br><br>
 
-        <label>Reason for Visit:</label><br>
-        <textarea name="reason" rows="4"></textarea><br><br>
+            <label>Reason for Visit:</label><br>
+            <textarea name="reason" rows="4"></textarea><br><br>
 
-        <label>
-            <input type="checkbox" required> I confirm the information is correct
-        </label><br><br>
+            <label>
+                <input type="checkbox" required> I confirm the information is correct
+            </label><br><br>
 
-        <input type="submit" value="Book Doctor Appointment">
+            <input type="submit" value="Book Appointment" class="btn">
 
-    </form>
+        </form>
 
+        <li><a href="doctor_appointment.html">Book Doctor Appointment</a></li>
+        <ul>
+    <li><a href="view_records.html">View Medical Records</a></li>
+    <li><a href="appointments.html">View / Manage Appointments</a></li>
+    <li><a href="doctor_appointment.html">Book Doctor Appointment</a></li>
+    <li><a href="payment.html">View Billing & Payments</a></li>
+    <li><a href="update_info.html">Update Contact Information</a></li>
+</ul>
+
+        <br>
+        <a href="appointments.html" class="btn">Back to Appointments</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexandra Hospital | Alexanhos-Web</p>
+        <p>For patient assistance, contact info@alexanhos-web.com</p>
+    </div>
+</footer>
 
 </body>
 </html>
