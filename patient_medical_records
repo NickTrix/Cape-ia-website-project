@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Records | Alexanhos-Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="p_login.html" class="active">Patient Portal</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Medical Records Section -->
+<section class="patient-dashboard">
+    <div class="container">
+        <h2>Your Medical Records</h2>
+        <p>Below is a summary of your recent medical history:</p>
+
+        <table border="
