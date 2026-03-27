@@ -26,4 +26,48 @@
         <h2>Your Medical Records</h2>
         <p>Below is a summary of your recent medical history:</p>
 
-        <table border="
+        <table border="1" width="100%">
+            <tr>
+                <th>Date</th>
+                <th>Doctor</th>
+                <th>Diagnosis</th>
+                <th>Treatment</th>
+            </tr>
+
+            <tr>
+                <td>2026-01-10</td>
+                <td>Dr. Adams</td>
+                <td>Flu</td>
+                <td>Medication prescribed</td>
+            </tr>
+
+            <tr>
+                <td>2026-02-15</td>
+                <td>Dr. Brown</td>
+                <td>Checkup</td>
+                <td>All normal</td>
+            </tr>
+
+            <tr>
+                <td>2026-03-05</td>
+                <td>Dr. Clarke</td>
+                <td>Allergy</td>
+                <td>Antihistamines</td>
+            </tr>
+        </table>
+
+        <br>
+        <a href="p_dashboard.html" class="btn">Back to Dashboard</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexandra Hospital | Alexanhos-Web</p>
+        <p>For patient assistance, contact info@alexanhos-web.com</p>
+    </div>
+</footer>
+
+</body>
+</html>
