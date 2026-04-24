@@ -50,5 +50,12 @@
         <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
     </div>
 </footer>
+<script>document.getElementById('staff-login-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // prevent actual form submission
+    const StaffName = document.getElementById('text').value;
+    // redirect to dashboard with staff name in URL
+    window.location.href = `staff_portal.html?name=${encodeURIComponent(staffName)}`;
+});
+</script>
 
 </html>
