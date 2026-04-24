@@ -52,7 +52,7 @@
 </footer>
 <script>document.getElementById('staff-login-form').addEventListener('submit', function(e) {
     e.preventDefault(); // prevent actual form submission
-    const StaffName = document.getElementById('text').value;
+    const staffName = document.getElementById('text').value;
     // redirect to dashboard with staff name in URL
     window.location.href = `staff_portal.html?name=${encodeURIComponent(staffName)}`;
 });
