@@ -27,8 +27,8 @@
             <p>Enter your credentials to access your portal</p>
 
             <form id="patient-login-form">
-                <label for="patient-name">Staff ID:</label>
-                <input type="text" id="text" name="text" placeholder="Enter your Staff ID" required>
+                <label for="staff-id">Staff ID:</label>
+                <input type="text" id="staff-id" name="staff-id" placeholder="Enter your Staff ID" required>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Enter your Password" required>
@@ -52,7 +52,7 @@
 </footer>
 <script>document.getElementById('staff-login-form').addEventListener('submit', function(e) {
     e.preventDefault(); // prevent actual form submission
-    const staffName = document.getElementById('text').value;
+    const staffName = document.getElementById('staff-id').value;
     // redirect to dashboard with staff name in URL
     window.location.href = `staff_portal.html?name=${encodeURIComponent(staffName)}`;
 };
