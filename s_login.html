@@ -54,8 +54,8 @@
     e.preventDefault(); // prevent actual form submission
     const staffName = document.getElementById('text').value;
     // redirect to dashboard with staff name in URL
-    window.location.href = `staff_portal.html?name=${encodeURIComponent(staffName)}`;
-});
+    window.location.href = `staff_portal.html?name=' + encodeURIComponent(staffName);
+};
 </script>
 
 </html>
