@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🏥 Alexandra Hospital</h1>
+            <nav>
+        
+                <a href="staff_portal.html">Home</a>
+        
+                <!--  Dropdown menu -->
+                <div class="dropdown">
+                    <button class="dropbtn"> Services ▾ </button>
+                    <div class="dropdown-content">
+                        <a href="p_records.html">Records</a>
+                        <a href="p_appointment.html">View Scheduled Appointments</a>
+                        <a href="pbilling.html">Billing</a>
+                    </div>
+                </div>
+        
+                <a href="contact.html">Contact</a>        
+                <a href ="index.html"> Logout</a>
+                    
+            </nav>
+        </div>
+    </header>
+    
+
+<!-- Medical Records Section -->
+<section class="patient-dashboard">
+    <div class="container">
+        <h2>Your Medical Records</h2>
+        <p>Below is a summary of your recent medical history:</p>
+
+        <table border="1" width="100%">
+            <tr>
+                <th>Date</th>
+                <th>Doctor</th>
+                <th>Diagnosis</th>
+                <th>Treatment</th>
+            </tr>
+
+            <tr>
+                <td>2026-01-10</td>
+                <td>Dr. Adams</td>
+                <td>Flu</td>
+                <td>Medication prescribed</td>
+            </tr>
+
+            <tr>
+                <td>2026-02-15</td>
+                <td>Dr. Brown</td>
+                <td>Checkup</td>
+                <td>None</td>
+            </tr>
+
+            <tr>
+                <td>2026-03-05</td>
+                <td>Dr. Clarke</td>
+                <td>Allergy</td>
+                <td>Antihistamines</td>
+            </tr>
+        </table>
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
+    </div>
+</footer>
+            
+</body>
+</html>

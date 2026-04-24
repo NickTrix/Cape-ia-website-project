@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Records - Alexandra Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+        <nav>
+    
+            <a href="staff_portal.html">Home</a>
+    
+            <div class="dropdown">
+                <button class="dropbtn"> Services ▾ </button>
+                <div class="dropdown-content">
+                    <a href="staff_patient_records.html">Records</a>
+                    <a href="sbook_appointment.html">Appointments</a>
+                    <a href="sbilling.html">Billing</a>
+                    <a href="reports.html">Reports</a>
+                </div>
+            </div>
+    
+            <a href="contact.html">Contact</a>        
+            <a href ="index.html"> Logout</a>
+                
+        </nav>
+    </div>
+</header>
+
+<h2 class="center-title">Schedule an Appointment</h2>
+
+<form class="appointment-form" action="#" method="post">
+        
+    <label>Patient ID:</label>
+    <input type="text" name="patientID" placeholder="090909" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="patientemail@gmail.com" required>
+
+    <label>Telephone Number:</label>
+    <input type="tel" name="phone" placeholder="(000) 000 0000" required>
+
+    <!-- NEW: Department -->
+    <label>Department:</label>
+    <select name="department" required>
+        <option value="">--Select Department--</option>
+        <option>Radiology</option>
+        <option>Laboratory</option>
+        <option>Family Medicine</option>
+        <option>Dermatology</option>
+        <option>Ophthalmology</option>
+        <option>Gynecology</option>
+    </select>
+
+    <!-- NEW: Doctor -->
+    <label>Doctor:</label>
+    <select name="doctor" required>
+        <option value="">--Select Doctor--</option>
+        <option>Dr. Adams</option>
+        <option>Dr. Brown</option>
+        <option>Dr. Clarke</option>
+        <option>Dr. Williams</option>
+    </select>
+
+    <label>Date:</label>
+    <input type="date" name="date" required>
+
+    <!-- OPTIONAL IMPROVEMENT -->
+    <label>Available Time:</label>
+    <select name="time" required>
+        <option value="">--Select Time--</option>
+        <option>8:00 AM</option>
+        <option>9:00 AM</option>
+        <option>10:00 AM</option>
+        <option>11:00 AM</option>
+        <option>1:00 PM</option>
+        <option>2:00 PM</option>
+        <option>3:00 PM</option>
+    </select>
+
+    <input type="submit" value="Book Appointment">
+
+</form>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
+    </div>
+</footer>
+  
+</body>
+</html>

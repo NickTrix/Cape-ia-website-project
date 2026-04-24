@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexanhos-Web | Patient Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Patient Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
 
 <header>
@@ -20,37 +22,35 @@
 </header>
 
 <section class="login-section">
-    <div class="container">
+    <div class="login-box">
         <h2>Patient Portal Login</h2>
-        <p>Enter your first and last name to access your portal.</p>
 
         <form id="patient-login-form">
-            <label for="patient-name">Patient Name:</label>
-            <input type="text" id="patient-name" name="patient-name" placeholder="First and Last Name" required>
+            <label for="patient-name">Patient ID:</label>
+            <input type="text" id="patient-name" placeholder="Enter your patient ID" required>
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Your Password" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
 
             <button type="submit" class="btn">Login</button>
         </form>
 
-        <p>Forgot your password? <a href="reset_password.html">Reset it here</a></p>
-        <a href="index.html" class="btn">Back to Home</a>
+        <p class="small-text">
+            <b>Forgot your password?</b> <a href="reset_password.html">Reset here</a>
+        </p>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Alexandra Hospital | Alexanhos-Web</p>
-        <p>For patient assistance, contact info@alexanhos-web.com</p>
+        <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
     </div>
 </footer>
 
 <script>
 document.getElementById('patient-login-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent actual form submission
+    e.preventDefault();
     const patientName = document.getElementById('patient-name').value;
-    // Redirect to dashboard with name in URL
     window.location.href = `patient_dashboard.html?name=${encodeURIComponent(patientName)}`;
 });
 </script>

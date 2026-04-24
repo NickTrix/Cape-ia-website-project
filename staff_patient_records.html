@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Patient Records</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>🏥 Alexandra Hospital</h1>
+            
+            <nav>
+                <a href="staff_portal.html">Home</a>
+                <!--  Dropdown menu -->
+                  
+                <div class="dropdown">
+                    <button class="dropbtn"> Services ▾ </button>
+                    <div class="dropdown-content">
+                        <a href="staff_patient_records.html">Records</a>
+                        <a href="sbook_appointment.html">Appointments</a>
+                        <a href="sbilling.html">Billing</a>
+                        <a href="reports.html">Reports</a>
+                    </div>
+                </div>
+                
+                <a href="contact.html">Contact</a>        
+                <a href ="index.html"> Logout</a>
+                
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+
+        <h2>Patient Records</h2>
+
+        <!-- SEARCH -->
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search by Name or ID..."
+        >
+
+        <!-- TABLE -->
+        <table border="1" cellpadding="10" >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Doctor</th>
+                    <th>Visit</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+
+                <tr>
+                    <td>Jessica Moore</td>
+                    <td>567890</td>
+                    <td>45</td>
+                    <td>Female</td>
+                    <td>Dr. Smith</td>
+                    <td>2026-02-04</td>
+                    <td>
+                        <button onclick="viewRecord(this)">View</button>
+                        <button onclick="editRecord(this)">Edit</button>
+                        <button onclick="deleteRecord(this)">Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <!-- PATIENT DETAILS -->
+        <div id="patientDetails" >
+            <h3>Patient Details</h3>
+
+            <p><strong>Name:</strong> <span id="dName"></span></p>
+            <p><strong>Medical History:</strong> <span id="dHistory"></span></p>
+            <p><strong>Medication:</strong> <span id="dMedication"></span></p>
+            <p><strong>Test:</strong> <span id="dTest"></span></p>
+            <p><strong>Result:</strong> <span id="dResult"></span></p>
+            <p><strong>Notes:</strong> <span id="dNotes"></span></p>
+        </div>
+
+        <br>
+        <hr>
+        <hr>
+
+        <!-- PATIENT DETAILS  -->
+        <h3>Add New Patient</h3>
+
+        <form id="patientForm" >
+
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="pid" placeholder="Patient ID" required>
+            <input type="number" id="age" placeholder="Age" required>
+
+            <select id="gender" required>
+                <option value="">Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <input type="text" id="doctor" placeholder="Doctor" required>
+            <input type="date" id="visit" required>
+
+            <!-- MEDICAL INFO -->
+            <input type="text" id="history" placeholder="Medical History" required>
+            <input type="text" id="medication" placeholder="Medication" required>
+            <input type="text" id="test" placeholder="Test" required>
+            <input type="text" id="result" placeholder="Result" required>
+            <input type="text" id="notes" placeholder="Notes" required>
+
+            <button type="submit">Add Patient</button>
+        </form>
+
+    </main>
+
+</body>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+
+// SEARCH BY NAME OR ID
+document.getElementById("searchInput").addEventListener("keyup", function () {
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll("#tableBody tr");
+
+    rows.forEach(row => {
+        let name = row.cells[0].textContent.toLowerCase();
+        let id = row.cells[1].textContent.toLowerCase();
+
+        row.style.display = (name.includes(filter) || id.includes(filter)) ? "" : "none";
+    });
+});
+
+
+// ADD PATIENT
+document.getElementById("patientForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let table = document.getElementById("tableBody");
+
+    let row = table.insertRow();
+
+    row.innerHTML = `
+        <td>${document.getElementById("name").value}</td>
+        <td>${document.getElementById("pid").value}</td>
+        <td>${document.getElementById("age").value}</td>
+        <td>${document.getElementById("gender").value}</td>
+        <td>${document.getElementById("doctor").value}</td>
+        <td>${document.getElementById("visit").value}</td>
+        <td>
+            <button onclick="viewRecord(this)">View</button>
+            <button onclick="editRecord(this)">Edit</button>
+            <button onclick="deleteRecord(this)">Delete</button>
+        </td>
+    `;
+
+    // STORE MEDICAL DATA PER PATIENT
+    row.dataset.history = document.getElementById("history").value;
+    row.dataset.medication = document.getElementById("medication").value;
+    row.dataset.test = document.getElementById("test").value;
+    row.dataset.result = document.getElementById("result").value;
+
+    this.reset();
+});
+
+
+// VIEW PATIENT
+function viewRecord(btn){
+    let row = btn.parentElement.parentElement;
+
+    document.getElementById("patientDetails").style.display = "block";
+
+    document.getElementById("dName").textContent = row.cells[0].textContent;
+    document.getElementById("dHistory").textContent = row.dataset.history;
+    document.getElementById("dMedication").textContent = row.dataset.medication;
+    document.getElementById("dTest").textContent = row.dataset.test;
+    document.getElementById("dResult").textContent = row.dataset.result;
+    document.getElementById("dNotes").textContent = row.dataset.result;
+}
+
+
+// EDIT PATIENT (basic)
+function editRecord(btn){
+    let row = btn.parentElement.parentElement;
+
+    let name = prompt("Edit Name", row.cells[0].textContent);
+    let age = prompt("Edit Age", row.cells[2].textContent);
+
+    if(name) row.cells[0].textContent = name;
+    if(age) row.cells[2].textContent = age;
+}
+
+
+// DELETE PATIENT
+function deleteRecord(btn){
+    if(confirm("Delete this patient?")){
+        btn.parentElement.parentElement.remove();
+    }
+}
+
+</script>
+
+</html>

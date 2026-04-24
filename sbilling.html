@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+
+        <nav>
+            <a href="staff_portal.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Services ▾</button>
+                <div class="dropdown-content">
+                    <a href="staff_patient_records.html">Records</a>
+                    <a href="sbook_appointment.html">Appointments</a>
+                    <a href="sbilling.html">Billing</a>
+                    <a href="reports.html">Reports</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>        
+            <a href="index.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="billing-page">
+
+    <div class="container">
+
+        <h2 class="center-title">Patient Bills</h2>
+
+        <!-- Bills Table -->
+        <section class="billing-section">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Invoice #</th>
+                        <th>Service</th>
+                        <th>Amount (XCD)</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Jessica Moore</td>
+                        <td>12345</td>
+                        <td>Consultation</td>
+                        <td>$150.00</td>
+                        <td class="paid">Paid</td>
+                        <td><button class="btn small">View</button></td>
+                    </tr>
+
+                    <tr>
+                        <td>Mark Davis</td>
+                        <td>12346</td>
+                        <td>Lab Test</td>
+                        <td>$75.00</td>
+                        <td class="pending">Unpaid</td>
+                        <td><button class="btn small danger">Send Reminder</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </div>
+
+</main>
+
+<footer>
+  <div class="container">
+      <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

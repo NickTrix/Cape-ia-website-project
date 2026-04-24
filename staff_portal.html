@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>🏥 Alexandra Hospital</h1>
+            <nav>
+            
+                <a href="staff_portal.html">Home</a>
+            
+                <!--  Dropdown menu -->
+                <div class="dropdown">
+                    <button class="dropbtn"> Services ▾ </button>
+                    <div class="dropdown-content">
+                        <a href="staff_patient_records.html">Records</a>
+                        <a href="sbook_appointment.html">Appointments</a>
+                        <a href="sbilling.html">Billing</a>
+                        <a href="reports.html">Reports</a>
+                    </div>
+                </div>
+            
+                <a href="contact.html">Contact</a>        
+                <a href ="index.html"> Logout</a>
+                        
+            </nav>
+        </div>
+    </header>    
+    
+    <section class="staff-dashboard">
+        <div class="container">
+
+            <h2 id="welcome-message">Welcome to the Staff Portal!</h2>
+            <p> Manage hospital operations efficiently</p>
+            <br>
+            
+            <div class="dashboard-grid">
+            <a href="staff_patient_records.html" class="dashboard-card"> View and Manage Patients Records</a>
+                <a href="sbook_appointment.html" class="dashboard-card"> Create an Appointment</a>
+                <a href="billing.html" class="dashboard-card" > Billing & Payments</a>
+                <a href="reports.html" class="dashboard-card"> Generate Hospital Records</a>
+            </div>
+        
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

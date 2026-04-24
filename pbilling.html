@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Billing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="billing-bg">
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+
+        <nav>
+            <a href="staff_portal.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Services ▾</button>
+                <div class="dropdown-content">
+                    <a href="p_records.html">Records</a>
+                    <a href="p_appointment.html">Appointments</a>
+                    <a href="pbilling.html">Billing</a>
+                </div>
+            </div>
+
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="billing-page">
+
+    <!-- SIDE BY SIDE SECTION -->
+    <div class="billing-grid">
+
+        <!-- Outstanding Payments -->
+        <section class="billing-section">
+            <h2>Outstanding Payments</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Amount (XCD)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Consultation</td>
+                        <td>2026-01-10</td>
+                        <td>$150.00</td>
+                        <td class="pending">Outstanding</td>
+                    </tr>
+
+                    <tr>
+                        <td>Blood Test</td>
+                        <td>2026-01-15</td>
+                        <td>$75.00</td>
+                        <td class="pending">Outstanding</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Payment History -->
+        <section class="billing-section">
+            <h2>Payment History</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Date Paid</th>
+                        <th>Amount (XCD)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>X-Ray</td>
+                        <td>2026-03-20</td>
+                        <td>$120.00</td>
+                        <td class="paid">Paid</td>
+                    </tr>
+
+                    <tr>
+                        <td>Eye Exam</td>
+                        <td>2026-03-25</td>
+                        <td>$90.00</td>
+                        <td class="paid">Paid</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <!-- Make Payment -->
+    <section class="billing-section payment-form">
+        <h2>Make a Payment</h2>
+
+        <form action="#" method="post">
+
+            <label>Service:</label>
+            <input type="text" name="service" placeholder="Consultation" required>
+
+            <label>Amount Due (XCD):</label>
+            <input type="number" name="amount" min="0" step="0.01" required>
+
+            <p class="note">*Conversion Rate: 1 USD = 3.7169 XCD</p>
+
+            <label>Payment Method:</label>
+            <select name="paymentMethod" required>
+                <option value="">--Select--</option>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+                <option>Insurance</option>
+            </select>
+
+            <button type="submit">Pay Now</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Alexandra Hospital Patient Portal</p>
+</footer>
+
+</body>
+</html>

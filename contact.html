@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Alexandra Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>🏥 Alexandra Hospital</h1>
+
+        <nav>
+            <a href="staff_portal.html">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Services ▾</button>
+                <div class="dropdown-content">
+                    <a href="p_records.html">Records</a>
+                    <a href="p_appointment.html">Appointments</a>
+                    <a href="pbilling.html">Billing</a>
+                </div>
+            </div>
+
+            <a href="contact.html" class="active">Contact</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </div>
+</header>
+
+<main class="contact-page">
+
+    <div class="container">
+
+        <h2 class="center-title">Contact Us</h2>
+        <p class="subtitle">Have questions or need assistance? Get in touch with us.</p>
+
+        <div class="contact-grid">
+
+            <!-- Contact Info -->
+            <div class="contact-card">
+                <h3>Hospital Information</h3>
+                <p><strong>Address:</strong> Charlestown, Nevis</p>
+                <p><strong>Phone:</strong> +1 (869) 460-0000</p>
+                <p><strong>Email:</strong> info@alexanhos-web.com</p>
+                <p><strong>Hours:</strong> Mon–Fri: 8:00 AM – 5:00 PM</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-card">
+                <h3>Send a Message</h3>
+
+                <form action="#" method="post" class="contact-form">
+
+                    <label>Full Name:</label>
+                    <input type="text" name="name" required>
+
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+
+                    <label>Subject:</label>
+                    <input type="text" name="subject" required>
+
+                    <label>Message:</label>
+                    <textarea name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexandra Hospital Patient Portal</p>
+    </div>
+</footer>
+
+</body>
+</html>

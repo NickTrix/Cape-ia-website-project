@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Patient Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🏥 Alexandra Hospital</h1>
+            <nav>
+        
+                <a href="staff_portal.html">Home</a>
+        
+                <!--  Dropdown menu -->
+                <div class="dropdown">
+                    <button class="dropbtn"> Services ▾ </button>
+                    <div class="dropdown-content">
+                        <a href="p_records.html">Records</a>
+                        <a href="p_appointment.html">View Scheduled Appointments</a>
+                        <a href="pbilling.html">Billing</a>
+                    </div>
+                </div>
+        
+                <a href="contact.html">Contact</a>        
+                <a href ="index.html"> Logout</a>
+                    
+            </nav>
+        </div>
+    </header>
+    
+    <section class="dashboard">
+
+    <div class="container">
+
+        <h2 id="welcome-message">Welcome to the Patient Portal!</h2>
+        <p class="subtitle"> Manage your health records and appointments with just the click of a button </p>
+
+        <div class="dashboard-grid">
+
+            <a href="p_records.html" class="dashboard-card"> Medical Records</a></li>
+
+            <a href="p_appointment.html" class="dashboard-card"> Appointments</a></li>
+
+            <a href="p_billing" class="dashboard-card" >Billing</a></li>
+
+        </div>
+        
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Alexanhos-Web. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>
